@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     const navlinks = <>
         <ul className="flex space-x-4">
-            <li><Link></Link></li>
-            <li><Link></Link></li>
+            <li><Link>Academic</Link></li>
+            <li><Link>Class Schedule</Link></li>
             <li><Link></Link></li>
             <li><Link></Link></li>
             <li><Link></Link></li>
