@@ -25,7 +25,7 @@ const HomeInterface = () => {
                         <img className="h-10 w-10 relative" src="/src/assets/cap.png" alt="" />
                         <img className="h-16 w-28 -mt-8" src="/src/assets/moon.png" alt="" />
                     </div>
-                    <button className="btn bg-[#66BAEA] w-80 font-bold text-2xl">Teacher Login</button>
+                    <Link to="teacher-login"><button className="btn bg-[#66BAEA] w-80 font-bold text-2xl">Teacher Login</button></Link>
                 </div>
                 <div className="flex flex-row items-center justify-center gap-10">
                     <div className="flex flex-col justify-center items-center">
