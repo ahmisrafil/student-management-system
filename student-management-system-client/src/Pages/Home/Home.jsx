@@ -5,7 +5,7 @@ import HomeInterface from "./Home/HomeInterface";
 const Home = () => {
     return (
         <>
-        <NavBar></NavBar>
+        
         <HomeInterface></HomeInterface>
         
       </>
