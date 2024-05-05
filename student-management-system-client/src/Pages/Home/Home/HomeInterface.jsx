@@ -6,7 +6,7 @@ const HomeInterface = () => {
         <div className="flex flex-row h-[100vh] bg-[10%] "
         style={{ backgroundImage: `url(${bg})` }}
        >
-            <div className=" bg-[#76EEB4] p-20">
+            <div className=" bg-[#76EEB4] p-20 shadow-2xlw-">
                 <img className="h-52 mx-20 mt-20" src="/src/assets/reader.png" alt="" />
                 <h3 className="font-bold text-4xl text-white text-center my-10">Student <br /> Management <br />System</h3>
             </div>

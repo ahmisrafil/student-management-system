@@ -1,7 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import bg from "../../assets/bg_img.png"
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const StudentLogin = () => {
+    const { signIn } = useContext(AuthContext);
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire({
+                    title: 'Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                Navigate("/");
+            })
+    }
+
+
+
+
+
     return (
         <div className="hero min-h-screen bg-[10%]"
         style={{ backgroundImage: `url(${bg})` }}
@@ -12,7 +44,7 @@ const StudentLogin = () => {
                     <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 lg:ml-20">
-                    <form className="card-body">
+                    <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Student Email</span>
