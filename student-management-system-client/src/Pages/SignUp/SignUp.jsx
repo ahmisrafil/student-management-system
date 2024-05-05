@@ -21,7 +21,7 @@ const SignUp = () => {
                     // create user entry in the database
                     const userInfo = {
                         name: data.name,
-                        email: data.email
+                        email: data.email,
                     }
                     console.log(userInfo);
                     // axiosPublic.post('/users', userInfo)
@@ -71,6 +71,9 @@ const SignUp = () => {
                         </label>
                         <input type="text"  {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
                         {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
+                    </div>
+                    <div className="form-control w-full my-6">
+                        <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
                     </div>
                     <div className="form-control">
                         <label className="label">
