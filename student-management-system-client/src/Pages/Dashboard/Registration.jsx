@@ -18,6 +18,7 @@ const Registration = () => {
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
       <div className="grid grid-cols-2 gap-4">
         <div>
+            <h3 className="text-xl font-semibold">Personal Details</h3>
           <label htmlFor="firstName" className="block text-gray-700">
             First Name
           </label>
