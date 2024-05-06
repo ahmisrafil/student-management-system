@@ -16,7 +16,7 @@ const NavBar = () => {
         <ul className="flex space-x-4">
             <li><Link>Academic</Link></li>
             <li><Link>Class Schedule</Link></li>
-            <li><Link></Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
             <li><Link></Link></li>
             <li><Link></Link></li>
             <li><Link></Link></li>
@@ -37,7 +37,7 @@ const NavBar = () => {
                 <Link to="/"><img className="h-10" src="https://school360.xyz/200837/200837_media/logos/contact_1711082709_2024-03-22.png" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 text-xl text-white font-semibold">
                     {navlinks}
                 </ul>
             </div>
