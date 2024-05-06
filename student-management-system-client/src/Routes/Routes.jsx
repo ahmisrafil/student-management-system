@@ -9,6 +9,7 @@ import StudentLogin from "../Pages/Login/StudentLogin";
 import TeacherLogin from "../Pages/Login/TeacherLogin";
 import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
+import Registration from "../Pages/Dashboard/Registration";
 
 export const router = createBrowserRouter([
     {
@@ -21,21 +22,28 @@ export const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-            path: "/student-login",
+            path: "student-login",
             element: <StudentLogin></StudentLogin>
         },
         {
-            path: "/teacher-login",
+            path: "teacher-login",
             element: <TeacherLogin></TeacherLogin>
         },
         {
-            path: "/signup",
+            path: "signup",
             element: <SignUp></SignUp>
         },
+        
+      ]
+    },
+    {
+      path: "dashboard",
+      element: <Dashboard></Dashboard>,
+      children: [
         {
-          path: "/dashboard",
-          element: <Dashboard></Dashboard>
-        },
+          path: "registration",
+          element: <Registration></Registration>
+        }
       ]
     },
   ]);
