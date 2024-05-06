@@ -1,4 +1,7 @@
-import { FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaRegIdCard, FaRegistered, FaSearch, FaShoppingCart, FaUsers, FaUtensils, FaWpforms } from "react-icons/fa";
+import { BsFillPersonFill } from "react-icons/bs";
+import {  FaCalendar, FaEnvelope, FaHome, FaIdCard,  FaSearch,  FaWpforms } from "react-icons/fa";
+import { FaArrowUpFromGroundWater, } from "react-icons/fa6";
+import { SiGoogleforms } from "react-icons/si";
 import { NavLink, Outlet } from "react-router-dom";
 
 
@@ -11,58 +14,45 @@ const Dashboard = () => {
                     {/* { */}
                         {/* isAdmin ? <> */}
                             <li>
-                                <NavLink to="/dashboard">
+                                <NavLink to="/dashboard/registration">
                                     <FaWpforms></FaWpforms>
                                     Registration</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/addItems">
-                                    <FaUtensils></FaUtensils>
-                                    Add Products</NavLink>
+                                <NavLink to="/dashboard/courses">
+                                    <SiGoogleforms></SiGoogleforms>
+                                    Courses</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/manageItems">
-                                    <FaList></FaList>
-                                    Manage Products</NavLink>
+                                <NavLink to="/dashboard/profile">
+                                    <BsFillPersonFill></BsFillPersonFill>
+                                    Profile</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/orders">
-                                    <FaBook></FaBook>
-                                    Manage Orders</NavLink>
+                                <NavLink to="/dashboard/schedule">
+                                    <FaCalendar></FaCalendar>
+                                    Schedule</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/users">
-                                    <FaUsers></FaUsers>
-                                    All Users</NavLink>
+                                <NavLink to="/dashboard/results">
+                                    <FaArrowUpFromGroundWater></FaArrowUpFromGroundWater>
+                                    Results</NavLink>
                             </li>
                         {/* </> */}
                             {/* : */}
                             <>
                                 <li>
-                                    <NavLink to="/dashboard/">
-                                        <FaHome></FaHome>
-                                        User Home</NavLink>
+                                    <NavLink to="/dashboard/attendance">
+                                        <FaIdCard></FaIdCard>
+                                        Attendance</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to="/dashboard/orders">
-                                        <FaCalendar></FaCalendar>
-                                       My Orders</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/cart">
-                                        <FaShoppingCart></FaShoppingCart>
-                                        My Cart </NavLink>
-                                </li>
+                                
                                 {/* <li>
                                     <NavLink to="/dashboard/review">
                                         <FaAd></FaAd>
                                         Add a Review</NavLink>
                                 </li> */}
-                                <li>
-                                    <NavLink to="/dashboard/paymentHistory">
-                                        <FaList></FaList>
-                                       Payment History</NavLink>
-                                </li>
+                                
                             </>
                     {/* // } */}
                     {/* shared nav links */}
