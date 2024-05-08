@@ -8,17 +8,22 @@ const Registration = () => {
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
     const [mobileNumber, setMobileNumber] = useState("");
-    const [finalQualification, setFinalQualification] = useState("");
+    const [gFirstName, setgFirstName] = useState("");
+    const [gLastName, setgLastName] = useState("");
+    const [gEmail, setgEmail] = useState("");
+    const [gMobileNumber, setgMobileNumber] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(firstName,lastName,dob,address,email,mobileNumber,gFirstName,gLastName,gEmail,gMobileNumber);
         // Handle form submission here
     };
     return (
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl text-gray-700">Students Information</h3>
             <div className="grid grid-cols-2 gap-4">
                 <div>
-                    <h3 className="text-xl font-semibold">Personal Details</h3>
+                    {/* <h3 className="text-xl font-semibold">Personal Details</h3> */}
                     <label htmlFor="firstName" className="block text-gray-700">
                         First Name
                     </label>
@@ -90,15 +95,81 @@ const Registration = () => {
                         className="w-full p-2 border rounded-md"
                     />
                 </div>
+                <h3 htmlFor="Gender" className="block text-gray-700">
+                    Gender
+                </h3><br />
+                <div className="form-control">
+                    <label className="label cursor-pointer gap-4 justify-center">
+                        <input type="radio" name="radio-10" className="radio checked:bg-red-500" checked />
+                        <span className="label-text">Male</span>
+                    </label>
+                </div><br />
+                <div className="form-control">
+                    <label className="label cursor-pointer gap-4 justify-center">
+                        <input type="radio" name="radio-10" className="radio checked:bg-blue-500" checked />
+                        <span className="label-text">Female</span>
+                    </label>
+                </div>
                 <div>
-                    <label htmlFor="finalQualification" className="block text-gray-700">
-                        Final Qualification
+                    <select className="select select-bordered select-sm w-full max-w-xs">
+                        <option disabled selected>Department</option>
+                        <option>Bangla</option>
+                        <option>English</option>
+                        <option>CSE</option>
+                        <option>EEE</option>
+                        <option>BBA</option>
+                        <option>Law</option>
+                    </select>
+                </div>
+            </div>
+            <h3 className="text-xl text-gray-700">Guardians Information</h3>
+            <div className="grid grid-cols-2 gap-4">
+                <div>
+                    {/* <h3 className="text-xl font-semibold">Personal Details</h3> */}
+                    <label htmlFor="firstName" className="block text-gray-700">
+                        First Name
                     </label>
                     <input
                         type="text"
-                        id="finalQualification"
-                        value={finalQualification}
-                        onChange={(e) => setFinalQualification(e.target.value)}
+                        id="gFirstName"
+                        value={gFirstName}
+                        onChange={(e) => setgFirstName(e.target.value)}
+                        className="w-full p-2 border rounded-md"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="lastName" className="block text-gray-700">
+                        Last Name
+                    </label>
+                    <input
+                        type="text"
+                        id="gLastName"
+                        value={gLastName}
+                        onChange={(e) => setgLastName(e.target.value)}
+                        className="w-full p-2 border rounded-md"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email" className="block text-gray-700">
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        id="gEmail"
+                        value={gEmail}
+                        onChange={(e) => setgEmail(e.target.value)}
+                        className="w-full p-2 border rounded-md"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="mobileNumber" className="block text-gray-700">
+                        Mobile Number
+                    </label>
+                    <input
+                        type="tel"
+                        id="gMobileNumber"
+                        value={gMobileNumber}
+                        onChange={(e) => setgMobileNumber(e.target.value)}
                         className="w-full p-2 border rounded-md"
                     />
                 </div>
