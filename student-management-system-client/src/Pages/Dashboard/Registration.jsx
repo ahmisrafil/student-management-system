@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+
 const Registration = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -14,10 +17,10 @@ const Registration = () => {
     const [gMobileNumber, setgMobileNumber] = useState("");
     const [gender, setGender] = useState('');
     const [dept, setDept] = useState("");
-
+const [img, setImg] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(firstName, lastName, dob, address, email, mobileNumber, gFirstName, gLastName, gEmail, gMobileNumber, gender,dept);
+        console.log(firstName, lastName, dob, address, email, mobileNumber, gFirstName, gLastName, gEmail, gMobileNumber, gender,dept,img);
         // Handle form submission here
     };
 
@@ -201,6 +204,15 @@ const Registration = () => {
                         className="w-full p-2 border rounded-md"
                     />
                 </div>
+            </div>
+            <div>
+            <h3 className="text-xl my-4 text-gray-700">Upload Your Photo</h3>
+            <input 
+            type="file" 
+            className="file-input file-input-bordered file-input-info w-full max-w-xs"
+            onChange={(e)=>setImg(e.target.files[0])} 
+            
+            />
             </div>
             <button
                 type="submit"
