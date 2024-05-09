@@ -12,12 +12,17 @@ const Registration = () => {
     const [gLastName, setgLastName] = useState("");
     const [gEmail, setgEmail] = useState("");
     const [gMobileNumber, setgMobileNumber] = useState("");
+    const [gender, setGender] = useState('');
+    const [dept, setDept] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(firstName,lastName,dob,address,email,mobileNumber,gFirstName,gLastName,gEmail,gMobileNumber);
+        console.log(firstName, lastName, dob, address, email, mobileNumber, gFirstName, gLastName, gEmail, gMobileNumber, gender,dept);
         // Handle form submission here
     };
+
+
+
     return (
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl text-gray-700">Students Information</h3>
@@ -98,28 +103,51 @@ const Registration = () => {
                 <h3 htmlFor="Gender" className="block text-gray-700">
                     Gender
                 </h3><br />
-                <div className="form-control">
-                    <label className="label cursor-pointer gap-4 justify-center">
-                        <input type="radio" name="radio-10" className="radio checked:bg-red-500" checked />
-                        <span className="label-text">Male</span>
-                    </label>
-                </div><br />
-                <div className="form-control">
-                    <label className="label cursor-pointer gap-4 justify-center">
-                        <input type="radio" name="radio-10" className="radio checked:bg-blue-500" checked />
-                        <span className="label-text">Female</span>
-                    </label>
+                <div>
+                    <div className="form-control">
+                        <label className="label cursor-pointer gap-4 justify-center">
+                            <input
+                                type="radio"
+                                name="radio-10"
+                                className="radio checked:bg-red-500"
+                                value="Male"
+                                checked={gender === 'Male'}
+                                // onChange={handleSubmit}
+                                onChange={(e) => setGender(e.target.value)}
+                            />
+                            <span className="label-text">Male</span>
+                        </label>
+                    </div>
+                    <div className="form-control">
+                        <label className="label cursor-pointer gap-4 justify-center">
+                            <input
+                                type="radio"
+                                name="radio-10"
+                                className="radio checked:bg-blue-500"
+                                value="Female"
+                                checked={gender === 'Female'}
+                                onChange={(e) => setGender(e.target.value)}
+                            />
+                            <span className="label-text">Female</span>
+                        </label>
+                    </div>
                 </div>
                 <div>
-                    <select className="select select-bordered select-sm w-full max-w-xs">
-                        <option disabled selected>Department</option>
-                        <option>Bangla</option>
-                        <option>English</option>
-                        <option>CSE</option>
-                        <option>EEE</option>
-                        <option>BBA</option>
-                        <option>Law</option>
+                    <h3 className="text-xl text-gray-700">Department</h3>
+                    <select
+                        className="select select-bordered select-sm w-full max-w-xs"
+                        onChange={(e) => setDept(e.target.value)}
+                        value={dept} // Set the value to the selectedDepartment state
+                    >
+                        <option disabled value="">Select Department</option>
+                        <option value="Bangla">Bangla</option>
+                        <option value="English">English</option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="BBA">BBA</option>
+                        <option value="Law">Law</option>
                     </select>
+
                 </div>
             </div>
             <h3 className="text-xl text-gray-700">Guardians Information</h3>
