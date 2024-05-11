@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../components/hooks/useAxiosPublic";
 
 
 const SignUp = () => {
@@ -9,7 +11,7 @@ const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
-
+    const  axiosPublic = useAxiosPublic();
     const onSubmit = data => {
         console.log(data);
         createUser(data.email, data.password)
@@ -24,21 +26,21 @@ const SignUp = () => {
                         email: data.email,
                     }
                     console.log(userInfo);
-                    // axiosPublic.post('/users', userInfo)
-                    //     .then(res => {
-                    //         if (res.data.insertedId) {
-                    //             console.log('user added to the database')
-                    //             reset();
-                    //             Swal.fire({
-                    //                 position: 'top-end',
-                    //                 icon: 'success',
-                    //                 title: 'User created successfully.',
-                    //                 showConfirmButton: false,
-                    //                 timer: 1500
-                    //             });
-                    //             navigate('/');
-                    //         }
-                    //     })
+                    axiosPublic.post('/students', userInfo)
+                        .then(res => {
+                            if (res.data.insertedId) {
+                                console.log('user added to the database')
+                                reset();
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'User created successfully.',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                                navigate('/');
+                            }
+                        })
 
 
                 })

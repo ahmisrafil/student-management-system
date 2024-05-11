@@ -3,10 +3,12 @@ import bg from "../../assets/bg_img.png"
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useAxiosPublic from "../../components/hooks/useAxiosPublic";
 
 const StudentLogin = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
 
     const from = location.state?.from?.pathname || "/";
@@ -41,12 +43,11 @@ const StudentLogin = () => {
                     email: result.user?.email,
                     name: result.user?.displayName
                 }
-                // axiosPublic.post('/users', userInfo)
-                // .then(res =>{
-                //     console.log(res.data);
-                //     navigate('/');
-                // })
-                console.log(userInfo);
+                axiosPublic.post('/students', userInfo)
+                .then(res =>{
+                    console.log(res.data);
+                    navigate('/');
+                })
                 Swal.fire({
                     title: 'Login Successful.',
                     showClass: {
@@ -58,6 +59,7 @@ const StudentLogin = () => {
                 });
                 navigate(from, { replace: true });
             })
+            
         }
 
 
