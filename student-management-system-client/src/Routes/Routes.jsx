@@ -10,6 +10,7 @@ import TeacherLogin from "../Pages/Login/TeacherLogin";
 import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import Registration from "../Pages/Dashboard/Registration";
+import Profile from "../Pages/Dashboard/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
           path: "registration",
           element: <Registration></Registration>
         },
+        {
+          path: "profile",
+          element: <Profile></Profile>
+        }
       ]
     },
   ]);
