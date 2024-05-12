@@ -11,6 +11,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import Registration from "../Pages/Dashboard/Registration";
 import Profile from "../Pages/Dashboard/Profile";
+import Courses from "../Pages/Dashboard/Courses";
 
 export const router = createBrowserRouter([
     {
@@ -48,6 +49,11 @@ export const router = createBrowserRouter([
         {
           path: "profile",
           element: <Profile></Profile>
+        },
+        {
+          path: "courses",
+          loader: () => fetch('/data.json'),
+          element: <Courses></Courses>
         }
       ]
     },
