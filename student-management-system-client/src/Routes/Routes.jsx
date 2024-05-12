@@ -48,6 +48,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "profile",
+          loader: () => fetch('/data.json'),
           element: <Profile></Profile>
         },
         {
