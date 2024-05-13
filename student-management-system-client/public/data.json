@@ -1,145 +1,339 @@
+[
+    {
+      "id": 1,
+      "name": "Introduction to Computer Science",
+      "code": "CS101",
+      "credit": 3,
+      "enrolled": 120,
+      "semester": 1
+    },
+    {
+      "id": 2,
+      "name": "Calculus I",
+      "code": "MATH101",
+      "credit": 4,
+      "enrolled": 90,
+      "semester": 1
+    },
+    {
+      "id": 3,
+      "name": "English Composition",
+      "code": "ENG102",
+      "credit": 3,
+      "enrolled": 110,
+      "semester": 1
+    },
+    {
+      "id": 4,
+      "name": "Principles of Economics",
+      "code": "ECON201",
+      "credit": 3,
+      "enrolled": 80,
+      "semester": 1
+    },
+    {
+      "id": 5,
+      "name": "Introduction to Psychology",
+      "code": "PSYCH101",
+      "credit": 3,
+      "enrolled": 100,
+      "semester": 1
+    },
+    {
+      "id": 6,
+      "name": "Biology Fundamentals",
+      "code": "BIO101",
+      "credit": 4,
+      "enrolled": 70,
+      "semester": 1
+    },
+    {
+      "id": 7,
+      "name": "Introduction to Sociology",
+      "code": "SOC101",
+      "credit": 3,
+      "enrolled": 85,
+      "semester": 2
+    },
+    {
+      "id": 8,
+      "name": "World History",
+      "code": "HIST101",
+      "credit": 3,
+      "enrolled": 95,
+      "semester": 2
+    },
+    {
+      "id": 9,
+      "name": "Introduction to Marketing",
+      "code": "MKT101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 2
+    },
+    {
+      "id": 10,
+      "name": "Organic Chemistry",
+      "code": "CHEM201",
+      "credit": 4,
+      "enrolled": 60,
+      "semester": 2
+    },
+    {
+      "id": 11,
+      "name": "Linear Algebra",
+      "code": "MATH201",
+      "credit": 3,
+      "enrolled": 85,
+      "semester": 2
+    },
+    {
+      "id": 12,
+      "name": "Microeconomics",
+      "code": "ECON202",
+      "credit": 3,
+      "enrolled": 70,
+      "semester": 2
+    },
+    {
+      "id": 13,
+      "name": "Introduction to Philosophy",
+      "code": "PHIL101",
+      "credit": 3,
+      "enrolled": 80,
+      "semester": 3
+    },
+    {
+      "id": 14,
+      "name": "Environmental Science",
+      "code": "ENVSCI101",
+      "credit": 3,
+      "enrolled": 65,
+      "semester": 3
+    },
+    {
+      "id": 15,
+      "name": "Introduction to Anthropology",
+      "code": "ANTH101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 3
+    },
+    {
+      "id": 16,
+      "name": "Digital Marketing",
+      "code": "MKT201",
+      "credit": 3,
+      "enrolled": 55,
+      "semester": 3
+    },
+    {
+      "id": 17,
+      "name": "Creative Writing",
+      "code": "CRW101",
+      "credit": 3,
+      "enrolled": 90,
+      "semester": 3
+    },
+    {
+      "id": 18,
+      "name": "Physics I",
+      "code": "PHYS101",
+      "credit": 4,
+      "enrolled": 60,
+      "semester": 4
+    },
+    {
+      "id": 19,
+      "name": "Art History",
+      "code": "ARTH101",
+      "credit": 3,
+      "enrolled": 70,
+      "semester": 4
+    },
+    {
+      "id": 20,
+      "name": "Data Structures and Algorithms",
+      "code": "CS201",
+      "credit": 4,
+      "enrolled": 80,
+      "semester": 4
+    },
+    {
+      "id": 21,
+      "name": "Introduction to Statistics",
+      "code": "STAT101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 4
+    },
+    {
+      "id": 22,
+      "name": "Human Physiology",
+      "code": "PHY101",
+      "credit": 4,
+      "enrolled": 55,
+      "semester": 4
+    },
+    {
+      "id": 23,
+      "name": "Introduction to Finance",
+      "code": "FIN101",
+      "credit": 3,
+      "enrolled": 70,
+      "semester": 5
+    },
+    {
+      "id": 24,
+      "name": "Spanish I",
+      "code": "SPAN101",
+      "credit": 3,
+      "enrolled": 65,
+      "semester": 5
+    },
+    {
+      "id": 25,
+      "name": "Principles of Management",
+      "code": "MGMT101",
+      "credit": 3,
+      "enrolled": 80,
+      "semester": 5
+    },
+    {
+      "id": 26,
+      "name": "Software Engineering",
+      "code": "SE101",
+      "credit": 4,
+      "enrolled": 70,
+      "semester": 5
+    },
+    {
+      "id": 27,
+      "name": "Introduction to Linguistics",
+      "code": "LING101",
+      "credit": 3,
+      "enrolled": 85,
+      "semester": 5
+    },
+    {
+      "id": 28,
+      "name": "Organizational Behavior",
+      "code": "OB101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 6
+    },
+    {
+      "id": 29,
+      "name": "Introduction to Astronomy",
+      "code": "ASTRO101",
+      "credit": 3,
+      "enrolled": 60,
+      "semester": 6
+    },
+    {
+      "id": 30,
+      "name": "Principles of Marketing",
+      "code": "MKT202",
+      "credit": 3,
+      "enrolled": 90,
+      "semester": 6
+    },
+    {
+      "id": 31,
+      "name": "Introduction to Political Science",
+      "code": "POLSCI101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 6
+    },
+    {
+      "id": 32,
+      "name": "Ethics",
+      "code": "ETH101",
+      "credit": 3,
+      "enrolled": 80,
+      "semester": 6
+    },
+    {
+      "id": 33,
+      "name": "Database Management Systems",
+      "code": "DBMS101",
+      "credit": 4,
+      "enrolled": 65,
+      "semester": 7
+    },
+    {
+      "id": 34,
+      "name": "Introduction to Microbiology",
+      "code": "MICROBIO101",
+      "credit": 4,
+      "enrolled": 55,
+      "semester": 7
+    },
+    {
+      "id": 35,
+      "name": "Cognitive Psychology",
+      "code": "COG101",
+      "credit": 3,
+      "enrolled": 70,
+      "semester": 7
+    },
+    {
+      "id": 36,
+      "name": "Business Law",
+      "code": "BLAW101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 7
+    },
+    {
+      "id": 37,
+      "name": "Web Development",
+      "code": "WEBDEV101",
+      "credit": 4,
+      "enrolled": 85,
+      "semester": 7
+    },
+    {
+      "id": 38,
+      "name": "Advanced Calculus",
+      "code": "ADV_MATH201",
+      "credit": 4,
+      "enrolled": 60,
+      "semester": 8
+    },
+    {
+      "id": 39,
+      "name": "Public Speaking",
+      "code": "PS101",
+      "credit": 3,
+      "enrolled": 90,
+      "semester": 8
+    },
+    {
+      "id": 40,
+      "name": "Human Resource Management",
+      "code": "HRM101",
+      "credit": 3,
+      "enrolled": 70,
+      "semester": 8
+    },
+    {
+      "id": 41,
+      "name": "Machine Learning",
+      "code": "ML101",
+      "credit": 4,
+      "enrolled": 80,
+      "semester": 8
+    },
+    {
+      "id": 42,
+      "name": "Business Ethics",
+      "code": "BIZ_ETH101",
+      "credit": 3,
+      "enrolled": 75,
+      "semester": 8
+    }
+  ]
 
-  [
-      {
-        "id": 1,
-        "name": "Introduction to Computer Science",
-        "code": "CS101",
-        "credit": 3,
-        "enrolled": 120
-      },
-      {
-        "id": 2,
-        "name": "Calculus I",
-        "code": "MATH101",
-        "credit": 4,
-        "enrolled": 90
-      },
-      {
-        "id": 3,
-        "name": "English Composition",
-        "code": "ENG102",
-        "credit": 3,
-        "enrolled": 110
-      },
-      {
-        "id": 4,
-        "name": "Principles of Economics",
-        "code": "ECON201",
-        "credit": 3,
-        "enrolled": 80
-      },
-      {
-        "id": 5,
-        "name": "Introduction to Psychology",
-        "code": "PSYCH101",
-        "credit": 3,
-        "enrolled": 100
-      },
-      {
-        "id": 6,
-        "name": "Biology Fundamentals",
-        "code": "BIO101",
-        "credit": 4,
-        "enrolled": 70
-      },
-      {
-        "id": 7,
-        "name": "Introduction to Sociology",
-        "code": "SOC101",
-        "credit": 3,
-        "enrolled": 85
-      },
-      {
-        "id": 8,
-        "name": "World History",
-        "code": "HIST101",
-        "credit": 3,
-        "enrolled": 95
-      },
-      {
-        "id": 9,
-        "name": "Introduction to Marketing",
-        "code": "MKT101",
-        "credit": 3,
-        "enrolled": 75
-      },
-      {
-        "id": 10,
-        "name": "Organic Chemistry",
-        "code": "CHEM201",
-        "credit": 4,
-        "enrolled": 60
-      },
-      {
-        "id": 11,
-        "name": "Linear Algebra",
-        "code": "MATH201",
-        "credit": 3,
-        "enrolled": 85
-      },
-      {
-        "id": 12,
-        "name": "Microeconomics",
-        "code": "ECON202",
-        "credit": 3,
-        "enrolled": 70
-      },
-      {
-        "id": 13,
-        "name": "Introduction to Philosophy",
-        "code": "PHIL101",
-        "credit": 3,
-        "enrolled": 80
-      },
-      {
-        "id": 14,
-        "name": "Environmental Science",
-        "code": "ENVSCI101",
-        "credit": 3,
-        "enrolled": 65
-      },
-      {
-        "id": 15,
-        "name": "Introduction to Anthropology",
-        "code": "ANTH101",
-        "credit": 3,
-        "enrolled": 75
-      },
-      {
-        "id": 16,
-        "name": "Digital Marketing",
-        "code": "MKT201",
-        "credit": 3,
-        "enrolled": 55
-      },
-      {
-        "id": 17,
-        "name": "Creative Writing",
-        "code": "CRW101",
-        "credit": 3,
-        "enrolled": 90
-      },
-      {
-        "id": 18,
-        "name": "Physics I",
-        "code": "PHYS101",
-        "credit": 4,
-        "enrolled": 60
-      },
-      {
-        "id": 19,
-        "name": "Art History",
-        "code": "ARTH101",
-        "credit": 3,
-        "enrolled": 70
-      },
-      {
-        "id": 20,
-        "name": "Data Structures and Algorithms",
-        "code": "CS201",
-        "credit": 4,
-        "enrolled": 80
-      }
-    ]
-
-  

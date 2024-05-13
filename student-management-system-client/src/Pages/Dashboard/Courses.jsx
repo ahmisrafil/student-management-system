@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
+
+import { useLoaderData } from "react-router-dom";
 
 
 const Courses = () => {
@@ -11,6 +10,7 @@ const Courses = () => {
       console.log(subjects);
     return (
         <div className="overflow-x-auto">
+            <h3 className="bg-cyan-600 text-white font-semibold text-center p-1">All Courses</h3>
                     <table className="table w-full">
                         {/* head */}
                         <thead>
