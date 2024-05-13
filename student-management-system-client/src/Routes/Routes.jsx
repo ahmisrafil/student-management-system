@@ -13,6 +13,8 @@ import Registration from "../Pages/Dashboard/Registration";
 import Profile from "../Pages/Dashboard/Profile";
 import Courses from "../Pages/Dashboard/Courses";
 import Results from "../Pages/Dashboard/Results";
+import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../Pages/Dashboard/UpdateProfile";
 
 export const router = createBrowserRouter([
     {
@@ -41,12 +43,8 @@ export const router = createBrowserRouter([
     },
     {
       path: "dashboard",
-      element: <Dashboard></Dashboard>,
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children: [
-        {
-          path: "registration",
-          element: <Registration></Registration>
-        },
         {
           path: "profile",
           loader: () => fetch('/data.json'),
@@ -60,7 +58,18 @@ export const router = createBrowserRouter([
         {
           path: "results",
           element: <Results></Results>
-        }
+        },
+        {
+          path: "update-profile/:id",
+          element: <UpdateProfile></UpdateProfile>,
+          // loader: ({params}) => fetch(`https://localhost:5000/user/${params?.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/users/${params?.id}`)
+        },
+        {
+          path: "registration/:id",
+          element: <Registration></Registration>,
+          loader: ({params}) => fetch(`http://localhost:5000/users/${params?.id}`)
+        },
       ]
     },
   ]);

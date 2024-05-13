@@ -1,13 +1,14 @@
 import { useState } from "react";
-import Swal from "sweetalert2";
 import useAxiosPublic from "../../components/hooks/useAxiosPublic";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
-const Registration = () => {
+const UpdateProfile = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [dob, setDob] = useState("");
@@ -64,7 +65,7 @@ const Registration = () => {
                 Swal.fire({
                     position: "top-center",
                     icon: "success",
-                    title: `${name}'s registration successful.`,
+                    title: `${name}'s profile is updated.`,
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -73,9 +74,9 @@ const Registration = () => {
         console.log('with image url', res.data);
 
     };
-
     return (
-        
+
+
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl text-gray-700">Students Information</h3>
             <div className="grid grid-cols-2 gap-4">
@@ -257,4 +258,4 @@ const Registration = () => {
     );
 };
 
-export default Registration;
+export default UpdateProfile;

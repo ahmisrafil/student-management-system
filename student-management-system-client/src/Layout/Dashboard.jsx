@@ -1,11 +1,24 @@
+import { useContext, useEffect, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import {  FaCalendar, FaEnvelope, FaHome, FaIdCard,  FaSearch,  FaWpforms } from "react-icons/fa";
 import { FaArrowUpFromGroundWater, } from "react-icons/fa6";
 import { SiGoogleforms } from "react-icons/si";
 import { NavLink, Outlet } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 
 const Dashboard = () => {
+    const { user } = useContext(AuthContext);
+    const [users, setUsers] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                setUsers(data);
+            });
+    }, [])
+    const finalUser = users.find(use=> use?.email === user?.email);
+    console.log(finalUser);
     return (
         <div className="flex">
             {/* dashboard side bar  section  */}
@@ -14,7 +27,7 @@ const Dashboard = () => {
                     {/* { */}
                         {/* isAdmin ? <> */}
                             <li>
-                                <NavLink to="/dashboard/registration">
+                                <NavLink  to={`/dashboard/registration/${finalUser?._id}`}>
                                     <FaWpforms></FaWpforms>
                                     Registration</NavLink>
                             </li>
