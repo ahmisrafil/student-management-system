@@ -15,18 +15,29 @@ const Profile = () => {
                 setUsers(data);
             });
     }, [])
-    const finalUser = users.find(use=> use?.email === user?.email);
+    const finalUser = users.find(use => use?.email === user?.email);
     console.log(finalUser);
     return (
         <div>
             <h3 className="bg-cyan-600 text-white text-center font-semibold p-1">Student Info</h3>
             <div className="my-10 flex flex-row justify-between mx-20">
-                <div>
-                    <h3>Name: {user?.displayName}</h3>
-                    <h3>Department: -</h3>
-                    <h3>Session: -</h3>
-                    <h3>Academic Year: -</h3>
-                    <h3>Email: {user?.email}</h3>
+                <div className="flex flex-row gap-10">
+                    <div>
+                        <h3 className="text-xl font-semibold">Students Information:</h3>
+                        <h3>Name: {finalUser?.first_name + " " + finalUser?.last_name}</h3>
+                        <h3>Department: {finalUser?.dept}</h3>
+                        <h3>Session: {finalUser?.session}</h3>
+                        <h3>Academic Year: 2024</h3>
+                        <h3>Academic Year: {finalUser?.contact}</h3>
+                        <h3>Email: {finalUser?.email}</h3>
+                    </div>
+                    <vr className="border-[1px] border-black" />
+                    <div>
+                    <h3 className="text-xl font-semibold">Guardians Information:</h3>
+                        <h3>Name: {finalUser?.gFirst_Name + " " + finalUser?.gLast_Name}</h3>
+                        <h3>Contact: {finalUser?.gContact}</h3>
+                        <h3>Email: {finalUser?.gEmail}</h3>
+                    </div>
                 </div>
                 <div>
                     <img className="h-40 mr-40" src={user?.photoURL} alt="" />
