@@ -32,7 +32,7 @@ const StudentLogin = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 });
-                navigate("/");
+                navigate("/dashboard/courses");
             })
     }
     const handleGoogleSignIn =()=>{
