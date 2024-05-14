@@ -15,6 +15,7 @@ import Courses from "../Pages/Dashboard/Courses";
 import Results from "../Pages/Dashboard/Results";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../Pages/Dashboard/UpdateProfile";
+import Performance from "../Pages/Dashboard/Performance";
 
 export const router = createBrowserRouter([
     {
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
           element: <Registration></Registration>,
           loader: ({params}) => fetch(`http://localhost:5000/users/${params?.id}`)
         },
+        {
+          path: "performance",
+          element: <Performance></Performance>
+        }
       ]
     },
   ]);

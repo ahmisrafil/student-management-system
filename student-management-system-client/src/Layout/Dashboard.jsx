@@ -55,9 +55,9 @@ const Dashboard = () => {
                             {/* : */}
                             <>
                                 <li>
-                                    <NavLink to="/dashboard/attendance">
+                                    <NavLink to="/dashboard/performance">
                                         <FaIdCard></FaIdCard>
-                                        Attendance</NavLink>
+                                        Performance</NavLink>
                                 </li>
                                 
                                 {/* <li>
