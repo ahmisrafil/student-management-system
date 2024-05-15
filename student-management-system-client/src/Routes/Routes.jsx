@@ -16,6 +16,7 @@ import Results from "../Pages/Dashboard/Results";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../Pages/Dashboard/UpdateProfile";
 import Performance from "../Pages/Dashboard/Performance";
+import UpdateResult from "../Pages/Dashboard/Result/UpdateResult";
 
 export const router = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ export const router = createBrowserRouter([
         {
           path: "performance",
           element: <Performance></Performance>
+        },
+        {
+          path:"update-result",
+          element: <UpdateResult></UpdateResult>
         }
       ]
     },

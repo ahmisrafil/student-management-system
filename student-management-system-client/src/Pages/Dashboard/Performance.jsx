@@ -8,7 +8,7 @@ const Performance = () => {
             
         <div className="grid grid-cols-2 mx-20 justify-center items-center gap-6 my-20">
             <Link to=""><button className="btn btn-sm ">Update Attendance</button></Link>
-            <Link to=""><button className="btn btn-sm ">Update Result</button></Link>
+            <Link to="/dashboard/update-result"><button className="btn btn-sm ">Update Result</button></Link>
             <Link to=""><button className="btn btn-sm ">Update Applications</button></Link>
             <Link to=""><button className="btn btn-sm ">Update Routine</button></Link>
             <Link to=""><button className="btn btn-sm ">Update Applications</button></Link>
