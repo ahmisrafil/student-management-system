@@ -35,6 +35,8 @@ async function run() {
 
 
     const userCollection = client.db("student-management-system").collection("users");
+    const courseCollection = client.db("student-management-system").collection("courses");
+    const studentsCollection = client.db("student-management-system").collection("students");
 
 
 
@@ -43,6 +45,11 @@ async function run() {
 
     app.get('/users', async (req, res) => {
       const result = await userCollection.find().toArray();
+      res.send(result);
+    });
+
+    app.get('/courses', async (req, res) => {
+      const result = await courseCollection.find().toArray();
       res.send(result);
     });
 
@@ -93,6 +100,11 @@ async function run() {
     })
 
 
+
+    app.get('/students', async (req, res) => {
+      const result = await studentsCollection.find().toArray();
+      res.send(result);
+    });
 
 
 
